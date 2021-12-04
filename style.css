@@ -1,0 +1,134 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  margin: 0%;
+  padding: 0%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  /* PRIMARY */
+  --bright: hsl(31, 77%, 52%);
+  --dark: hsl(184, 100%, 22%);
+  --veryDark: hsl(179, 100%, 13%);
+
+  /* NEUTRAL */
+  --trasparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryGray: hsl(0, 0%, 95%);
+  /* FONT */
+  --lexendDeca: "Lexend Deca", sans-serif;
+  --bigShoulders: "Big Shoulders Display" cursive;
+}
+
+.main {
+  background-color: var(--trasparentWhite);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70rem;
+  height: 40rem;
+  padding: 1px;
+}
+.boxcard {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3rem;
+}
+.naranja {
+  background-color: var(--bright);
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.azulclaro {
+  background-color: var(--dark);
+}
+.azuloscuro {
+  background-color: var(--veryDark);
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.naranja button {
+  color: var(--bright);
+}
+.azulclaro button {
+  color: var(--dark);
+}
+.azuloscuro button {
+  color: var(--veryDark);
+}
+.boxcard_btn {
+  margin-top: 40px;
+}
+.boxcard_btn button {
+  width: 13rem;
+  height: 4rem;
+  border-radius: 4rem;
+  border: 1px solid white;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+}
+.naranja button:hover {
+  cursor: pointer;
+  background-color: var(--bright);
+  color: white;
+}
+.azulclaro button:hover {
+  cursor: pointer;
+  background-color: var(--dark);
+  color: white;
+}
+
+.azuloscuro button:hover {
+  cursor: pointer;
+  background-color: var(--veryDark);
+  color: white;
+}
+.boxcard_titulo h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--veryGray);
+}
+
+.boxcard_texto {
+  padding-left: 0.4rem;
+}
+.boxcard_texto p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--trasparentWhite);
+}
+
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0rem 3rem;
+  }
+  .naranja {
+    background-color: var(--bright);
+    border-bottom-left-radius: 0rem;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+  }
+  .azuloscuro {
+    background-color: var(--veryDark);
+    border-bottom-right-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    border-top-right-radius: 0rem;
+  }
+}
